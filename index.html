@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Covid-19 Tracker</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width , initial-scale=1" >
+      
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+      <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+      <!-- Google Fonts -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calibri:400,700,400italic,700italic">
+      <!-- Bootstrap core CSS -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Material Design Bootstrap -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- Bootstrap tooltips -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+      <!-- Bootstrap core JavaScript -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script type="text/javascript" src="script.js"></script>
+      <style type="text/css">
+         body{
+   font-family: arial;
+}
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <h2 class="col-sm-12 text-left head5 ">COVID-19 Cases</h2>
+         </div>
+      </div>
+      <div class="container">
+         <div class="panel panel-primary">
+            <div class="panel-heading">Track Covid Cases</div>
+            <div class="panel-body">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="form-group">
+                        <label class="control-label">Country Name</label>
+                        <input type="text" class="form-control" name="cname" id="cname">
+                     </div>
+                  </div>
+                  <div class='col-md-4'>
+                     <div class="form-group">
+                        <label class="control-label">From</label>
+                        <div class='input-group date' id='datetimepicker'>
+                           <input type='text' class="form-control" id="start" />
+                           <span class="input-group-addon">
+                           <span class="glyphicon glyphicon-calendar"></span>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class='col-md-4'>
+                     <div class="form-group">
+                        <label class="control-label">To</label>
+                        <div class='input-group date' id='datetimepicker1'>
+                           <input type='text' class="form-control" id="end" />
+                           <span class="input-group-addon">
+                           <span class="glyphicon glyphicon-calendar"></span>
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-12 text-center"><input type="submit" id="btn" onclick="get();" class="btn btn-info text-center" value="Submit">
+                  <input type="submit" id="btn" onclick="reset();" class="btn btn-warning text-center" value="Reset">
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12">
+               <div class="card-columns" id="root"></div>
+            </div>
+         </div>
+      </div>
+      <script type="text/javascript"></script>
+   </body>
+</html>
